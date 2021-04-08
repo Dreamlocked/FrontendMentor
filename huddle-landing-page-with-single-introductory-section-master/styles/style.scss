@@ -1,0 +1,122 @@
+// COLOR variables
+$violet: hsl(257, 40%, 49%);
+$magenta: hsl(300, 69%, 71%);
+$min-width: 1100px;
+body {
+  background-color: $violet;
+  background-image: url("../images/bg-mobile.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+}
+@media screen and (min-width: $min-width) {
+  body {
+    background-image: url("../images/bg-desktop.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+}
+.header {
+  font-family: "Poppins", sans-serif;
+  font-size: 40px;
+  display: flex;
+  margin: 38px;
+}
+
+.title__icon {
+  font-size: 31px;
+}
+
+.container__imagen {
+  display: flex;
+  justify-content: center;
+}
+
+.img {
+  content: url("../images/illustration-mockups.svg");
+  width: 90%;
+}
+@media screen and (min-width: $min-width) {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .container__imagen {
+    width: 50%;
+    margin-top: 26px;
+  }
+}
+.text {
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  margin: 10px 20px;
+  font-size: 16px;
+  .text--title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .button {
+    margin-top: 30px;
+    color: $violet;
+    width: 180px;
+    height: 40px;
+    border-radius: 20px;
+    border: 0;
+    box-shadow: 0 0 6px rgb(68, 68, 68);
+    cursor: pointer;
+    transition: color 0.3s;
+    transition: background-color 0.3s;
+    font-weight: bold;
+  }
+}
+
+@media screen and (min-width: $min-width) {
+  .text {
+    width: 500px;
+    text-align: left;
+    margin: 10px;
+    font-size: 20px;
+    .text--title {
+      font-size: 40px;
+      line-height: 60px;
+      font-weight: bold;
+    }
+    .text--paragraph {
+      margin-top: 30px;
+      line-height: 1.5;
+    }
+    .button {
+      text-align: center;
+      width: 220px;
+      height: 50px;
+      border-radius: 40px;
+    }
+  }
+}
+.button:hover {
+  color: white;
+  background-color: $magenta;
+}
+
+.social {
+  margin-top: 30px;
+  font-size: 25px;
+  text-align: center;
+}
+
+.icon {
+  transition: color 0.3s;
+}
+.icon:hover {
+  color: $magenta;
+}
+
+@media screen and (min-width: $min-width) {
+  .social {
+    margin: 3% 10% 4%;
+    text-align: right;
+  }
+}

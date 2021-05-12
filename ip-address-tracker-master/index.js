@@ -6,10 +6,23 @@ GetByIpAddress = async () => {
     const location = response.data.location.city;
     const timeZone = `UTC ${response.data.location.timezone}`;
     const isp = response.data.isp;
-    document.getElementsByClassName("card__value")[0].innerHTML = ipAddress;
-    document.getElementsByClassName("card__value")[1].innerHTML = location;
-    document.getElementsByClassName("card__value")[2].innerHTML = timeZone;
-    document.getElementsByClassName("card__value")[3].innerHTML = isp;
+    document.getElementsByClassName("card")[0].innerHTML = `
+    <div class="card__chard">
+      <p class="card__title">IP ADDRESS</p>
+      <p class="card__value">${ipAddress}</p>
+    </div>
+    <div class="card__chard">
+      <p class="card__title">LOCATION</p>
+      <p class="card__value">${location}</p>
+    </div>
+    <div class="card__chard">
+      <p class="card__title">TIMEZONE</p>
+      <p class="card__value">${timeZone}</p>
+    </div>
+    <div class="card__chard">
+      <p class="card__title">ISP</p>
+    <p class="card__value">${isp}</p>
+    </div>`;
     SetViewMap(response.data.location.lat, response.data.location.lng);
   } catch (error) {
     console.log(error);

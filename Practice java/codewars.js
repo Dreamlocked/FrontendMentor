@@ -1,14 +1,6 @@
-function duplicateEncode(word) {
-  word = word.toLowerCase();
-  helper = word;
-  word.split("").forEach((x) => {
-    if (word.replace(x, "").includes(x)) {
-      helper = word.replaceAll(x,")")
-    } else {
-        helper = word.replace(x,"(")
-    }
-  });
-  return helper;
-}
+const variable = (a) => {
+  console.log("No se ingresó nada");
+  console.log(a);
+};
 
-console.log(duplicateEncode("xRbybT)bubebbblb(Ib"));
+variable();

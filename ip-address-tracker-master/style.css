@@ -37,6 +37,10 @@ body {
   padding-left: 20px;
   font-size: 15px;
   font-weight: 400;
+  transition: box-shadow 0.3s;
+}
+.search__bar:focus {
+  box-shadow: 0 0 3px 2px rgb(113, 61, 187);
 }
 .search__btn {
   margin: 0;
@@ -47,6 +51,11 @@ body {
   border-top-right-radius: 12px;
   border: 0;
   cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+.search__btn:hover {
+  background-color: rgb(113, 61, 187);
+  box-shadow: 0 0 3px 2px rgb(66, 35, 109);
 }
 .arrow {
   content: url("./images/icon-arrow.svg");
@@ -67,7 +76,7 @@ body {
   background-color: whitesmoke;
   width: 90%;
   padding: 5px 0px 20px;
-  box-shadow: 0px 0px 10px rgb(92, 92, 92);
+  box-shadow: 0px 0px 10px rgb(159, 139, 187);
   z-index: 10;
 }
 .card__chard {
